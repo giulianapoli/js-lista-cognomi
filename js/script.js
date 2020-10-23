@@ -11,11 +11,12 @@ cognomi.sort();
 // Mando in output la lista
 var listEl = document.getElementById('cognomiList')
 var posizioneUtente = 0;
+
 for(var i = 0; i < cognomi.length; i++){
   listEl.innerHTML += '<li>' + cognomi[i] + '</li>';
   if(cognomeUtente == cognomi[i]) {
-    posizioneUtente = 1;
+    posizioneUtente = i + 1;
   }
 }
 
-document.getElementById('result').innerHTML += (posizioneUtente + 3);
+document.getElementById('result').innerHTML += posizioneUtente;
